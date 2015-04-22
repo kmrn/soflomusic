@@ -1,0 +1,52 @@
+.container
+  .row
+    #carousel-example-generic.carousel.slide(data-ride="carousel")
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target="#carousel-example-generic", data-slide-to="0")
+        li(data-target="#carousel-example-generic", data-slide-to="1")
+        li(data-target="#carousel-example-generic", data-slide-to="2")
+      // Wrapper for slides
+      .carousel-inner
+        .item.active
+          img(src="http://static.wixstatic.com/media/f38551_04e4e0e29b674c2bb5679f893d02dc1f.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
+          .carousel-caption
+            h3 Caption Text
+        .item
+          img(src="http://static.wixstatic.com/media/f38551_1d098dad4d2e483590732414397a94cf.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
+          .carousel-caption
+            h3 Caption Text
+        .item
+          img(src="http://static.wixstatic.com/media/f38551_32295f64a2704b3288e647684de9fb22.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
+          .carousel-caption
+            h3 Caption Text
+      // Controls
+      a.left.carousel-control(href="#carousel-example-generic", role="button", data-slide="prev")
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href="#carousel-example-generic", role="button", data-slide="next")
+        span.glyphicon.glyphicon-chevron-right
+    // Carousel
+
+    .call-to-action
+      a(href="#").btn.btn-primary.btn-lg Schedule a Lesson Today
+    
+  .row.features
+    .col-sm-4
+      .music-icon
+        span.glyphicon.glyphicon-music
+      h3 Music Lessons
+      p We currently offer private music lessons for Guitar, Bass Guitar, Piano, and Ukulele.
+      
+    .col-sm-4
+      .cart-icon
+        span.glyphicon.glyphicon-shopping-cart
+      h3 Store
+      p We carry the essentials: Strings, Picks, Drum Sticks, etc. See our 
+        a(href="rates") hours
+        |.
+    .col-sm-4
+      .repair-icon
+        span.glyphicon.glyphicon-wrench
+      h3 Repair
+      p Need a repair or maintenance? Come in and let us help you out.
+

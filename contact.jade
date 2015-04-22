@@ -1,0 +1,56 @@
+#fb-root
+script.
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+.container
+  .row
+    h1.text-center Contact Us
+    hr
+    
+.contact-map 
+  iframe.map(src="http://static.parastorage.com/services/santa/1.464.45//static/external/googleMap.html?address=306%20NE%204th%20Street%20Delray%20Beach%2C%20FL&addressInfo=SoFLo%20Music%20School%0A306%20NE%204th%20Street%0ADelray%20Beach%2C%20FL.%2033436&mapType=ROADMAP&mapInteractive=true&showZoom=true&showPosition=true&showStreetView=true&showMapType=true&lat=26.468977&long=-80.06976629999997", width="100%", height="100%", frameborder="0", scrolling="no", data-reactid=".0.$SITE_ROOT.$SITE_STRUCTURE.$PAGES_CONTAINER.1.1.$SITE_PAGES.$c11rq.1.$GglMp0.0.0")
+
+.container 
+  .row.contact
+    .col-sm-4
+      address
+        strong SoFLo Music School
+        br
+        | 306 NE 4th St
+        br
+        | Delray Beach, FL 33436
+        br
+        abbr(title="Telephone") Tel:
+        |  (561) 674-1151
+
+      address
+        strong Email Us at
+        br
+        a(href="mailto:#") SoFLoGuitar@gmail.com
+        
+      .fb-page(data-href="https://www.facebook.com/facebook", data-width="380", data-hide-cover="false", data-show-facepile="false", data-show-posts="false")
+
+    
+    .col-sm-8
+      form
+        .form-group
+          //label(for="contactName") Name
+          input#contactName.form-control(type="name", placeholder="Name")
+        .form-group
+          //label(for="contactEmail") Email
+          input#contactEmail.form-control(type="email", placeholder="Email")
+        .form-group
+          //label(for="contactSubject") Subject
+          input#contactSubject.form-control(type="text", placeholder="Subject")
+        .form-group
+          //label(for="contactMessage") Message
+          textarea#contactMessage.form-control(type="password", placeholder="Message")
+        button.btn.btn-default(type="submit") Submit
+  
