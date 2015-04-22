@@ -6,10 +6,12 @@ html
     //meta(name="theme-color", content="#0288D1")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
     link(rel="stylesheet", href="css/main.css")
-    
+
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
-    
+
+    title #{ title }
+
   body
     .topbar
     header
@@ -51,12 +53,12 @@ html
         // /.navbar-collapse
         // /.container-fluid
 
-          
+
         h1.hidden-sm.hidden-xs
-          a(href="/").logo SoFLo Music School
+          a(href=#{url}).logo SoFLo Music School
         h1.visible-sm.visible-xs
-          a(href="/").logo SoFLo
-          
+          a(href=#{url}).logo SoFLo
+
         nav
           //.dropdown.visible-xs
             button#dropdownMenu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='true')
@@ -73,33 +75,30 @@ html
 
           ul.nav.nav-pills
             li(role="presentation", class=(current.source=='about'?'active':''))
-              a(href="/about") About
+              a(href="about") About
             li(role="presentation", class=(current.source=='rates'?'active':''))
-              a(href="/rates") Rates
+              a(href="rates") Rates
             li(role="presentation", class=(current.source=='teachers'?'active':'')).dropdown
-              a(class="dropdown-toggle", data-toggle="dropdown", href="/teachers", role="button", aria-expanded="false")
+              a(class="dropdown-toggle", data-toggle="dropdown", href="teachers", role="button", aria-expanded="false")
                 | Teachers
-                span.caret 
+                span.caret
               ul(role="menu").dropdown-menu
                 li
                   a(href="#") Teacher
             li(role="presentation", class=(current.source=='contact'?'active':''))
-              a(href="/contact") Contact Us
+              a(href="contact") Contact Us
             //h2 561 674 1151
 
     main
       != yield
-      
+
     footer
       .footer
-    
+
       .bottombar
         .container
           .row
             span
-              &copy 
+              &copy
               script document.write(new Date().getFullYear())
               |  SoFLo Music School
-
-      
-    
