@@ -17,77 +17,27 @@ html
     header
       .container
         .row
-          //nav.navbar.navbar-default
-            .container-fluid
-              // Brand and toggle get grouped for better mobile display
-              .navbar-header
-                button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
-                  span.sr-only Toggle navigation
-                  span.icon-bar
-                  span.icon-bar
-                  span.icon-bar
-                a.navbar-brand(href="/") Brand
-              // Collect the nav links, forms, and other content for toggling
-              #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav.navbar-right
+          h1.hidden-sm.hidden-xs
+            a(href="#{url}").logo SoFLo Music School
+          h1.visible-sm.visible-xs
+            a(href="#{url}").logo SoFLo
+
+          nav
+            ul.nav.nav-pills
+              li(role="presentation", class=(current.source=='about'?'active':''))
+                a(href="about") About
+              li(role="presentation", class=(current.source=='rates'?'active':''))
+                a(href="rates") Rates
+              li(role="presentation", class=(current.source=='teachers'?'active':'')).dropdown
+                a(class="dropdown-toggle", data-toggle="dropdown", href="teachers", role="button", aria-expanded="false")
+                  | Teachers
+                  span.caret
+                ul(role="menu").dropdown-menu
                   li
-                    a(href="/about") About
-                  li
-                    a(href="/rates") Rates
-                  li.dropdown
-                    a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
-                      | Teachers
-                      span.caret
-                    ul.dropdown-menu(role="menu")
-                      li
-                        a(href="#") Action
-                      li
-                        a(href="#") Another action
-                      li
-                        a(href="#") Something else here
-                      li.divider
-                      li
-                        a(href="#") Separated link
-                  li
-                    a(href="/contact") Contact
-        // /.navbar-collapse
-        // /.container-fluid
-
-
-        h1.hidden-sm.hidden-xs
-          a(href=#{url}).logo SoFLo Music School
-        h1.visible-sm.visible-xs
-          a(href=#{url}).logo SoFLo
-
-        nav
-          //.dropdown.visible-xs
-            button#dropdownMenu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown', aria-expanded='true')
-              span.glyphicon.glyphicon-menu-hamburger
-            ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
-              li(role='presentation')
-                a(role='menuitem', tabindex='-1', href='/about') About
-              li(role='presentation')
-                a(role='menuitem', tabindex='-1', href='/rates') Rates
-              li(role='presentation')
-                a(role='menuitem', tabindex='-1', href='/teachers') Teachers
-              li(role='presentation')
-                a(role='menuitem', tabindex='-1', href='/contact') Contact Us
-
-          ul.nav.nav-pills
-            li(role="presentation", class=(current.source=='about'?'active':''))
-              a(href="about") About
-            li(role="presentation", class=(current.source=='rates'?'active':''))
-              a(href="rates") Rates
-            li(role="presentation", class=(current.source=='teachers'?'active':'')).dropdown
-              a(class="dropdown-toggle", data-toggle="dropdown", href="teachers", role="button", aria-expanded="false")
-                | Teachers
-                span.caret
-              ul(role="menu").dropdown-menu
-                li
-                  a(href="#") Teacher
-            li(role="presentation", class=(current.source=='contact'?'active':''))
-              a(href="contact") Contact Us
-            //h2 561 674 1151
+                    a(href="#") Teacher
+              li(role="presentation", class=(current.source=='contact'?'active':''))
+                a(href="contact") Contact Us
+              //h2 561 674 1151
 
     main
       != yield
