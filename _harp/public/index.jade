@@ -6,20 +6,20 @@
         li.active(data-target="#carousel-example-generic", data-slide-to="0")
         li(data-target="#carousel-example-generic", data-slide-to="1")
         li(data-target="#carousel-example-generic", data-slide-to="2")
+        li(data-target="#carousel-example-generic", data-slide-to="3")
+        li(data-target="#carousel-example-generic", data-slide-to="4")
       // Wrapper for slides
       .carousel-inner
         .item.active
           img(src="http://static.wixstatic.com/media/f38551_04e4e0e29b674c2bb5679f893d02dc1f.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
-          .carousel-caption
-            h3 Caption Text
         .item
           img(src="http://static.wixstatic.com/media/f38551_1d098dad4d2e483590732414397a94cf.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
-          .carousel-caption
-            h3 Caption Text
         .item
           img(src="http://static.wixstatic.com/media/f38551_32295f64a2704b3288e647684de9fb22.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
-          .carousel-caption
-            h3 Caption Text
+        .item
+          img(src="http://static.wixstatic.com/media/f38551_9d30e049e411988ee936d8125e07dd7b.png_srz_p_960_395_75_22_0.50_1.20_0.00_png_srz", alt="...")
+        .item
+          img(src="http://static.wixstatic.com/media/f38551_a84a1d7a629141ef89a3cd0be7ee5d1d.jpg_srz_p_960_395_75_22_0.50_1.20_0.00_jpg_srz", alt="...")
       // Controls
       a.left.carousel-control(href="#carousel-example-generic", role="button", data-slide="prev")
         span.glyphicon.glyphicon-chevron-left
@@ -28,7 +28,7 @@
     // Carousel
 
     .call-to-action
-      a(href="contact").btn.btn-primary.btn-lg Schedule a Lesson Today
+      a(href="#{url}/contact").btn.btn-primary.btn-lg Schedule a Lesson Today
 
   .row.features
     .col-sm-4
@@ -42,7 +42,7 @@
         span.glyphicon.glyphicon-shopping-cart
       h3 Store
       p We carry the essentials: Strings, Picks, Drum Sticks, etc. See our
-        a(href="rates") hours
+        a(href="rates")  hours
         |.
     .col-sm-4
       .repair-icon

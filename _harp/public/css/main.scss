@@ -20,16 +20,22 @@ header {
   width: 100%;
   padding: 20px;
   vertical-align: middle;
+    
+  @media (max-width: 740px) {
+    .row { 
+      text-align: center; 
+    }
+  }
+  
+  @media (max-width: 940px) {
+    h1 { font-size: 3rem; }
+  }
   
   h1 {
-    text-align: left;
-    font-weight: 600;
+    //text-align: left;
+    font-weight: 800;
     float: left;
-  }
-  @media (max-width:400px) {
-    .logo {
-      @extend .center-block;
-    }
+    font-size: 3.5rem;
   }
   
 
@@ -176,22 +182,39 @@ main {
 
 
 footer {
+  color: #fff;
   
+  @media (max-width: 720px) {
+    .footer,
+    .bottombar {
+      text-align: center;
+    }
+  }
 
   .footer {
     margin-top: 80px;
     background-color: #03A9F4;
-    height: 60px;
-
+    padding-top: 50px;
+    
+    address {
+      font-size: 1.2em;
+    }
   }
 
   .bottombar {
     background-color: #0288D1;
-    color: #fff;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     span {
       //margin: 10px;
     }
   }
+}
+
+
+.ez-shadow {
+  -webkit-box-shadow: 1px 3px 6px 0 #999;
+  -moz-box-shadow: 1px 3px 6px 0 #999;
+  box-shadow: 1px 3px 6px 0 #999;
 }

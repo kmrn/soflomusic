@@ -1,2 +1,3 @@
-#SoFLo Music
-Soflo music school website redesign. It uses HarpJS and Jade.
+# soflomusic
+redesign for the SoFLo Music School
+
