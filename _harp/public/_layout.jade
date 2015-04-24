@@ -5,7 +5,7 @@ html
     meta(name="theme-color", content="#03A9F4")
     //meta(name="theme-color", content="#0288D1")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-    link(rel="stylesheet", href="#{url}/css/main.css")
+    link(rel="stylesheet", href="/css/main.css")
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
@@ -47,18 +47,21 @@ html
       .footer
         .container
           .row
-            address
-              strong SoFLo Music School
-              br
-              | 306 NE 4th St
-              br
-              | Delray Beach, FL 33436
-              br
-              abbr(title="Telephone") Tel:
-              |  (561) 674-1151
+            .col-sm-12
+              address
+                strong SoFLo Music School
+                br
+                | 306 NE 4th St
+                br
+                | Delray Beach, FL 33436
+                br
+                abbr(title="Telephone") Tel:
+                |  (561) 674-1151              
+              
       .bottombar
         .container
           .row
-            span &copy
-              script document.write(new Date().getFullYear())
-              |  SoFLo Music School
+            .col-sm-12
+              span &copy
+                script document.write(new Date().getFullYear())
+                |  SoFLo Music School

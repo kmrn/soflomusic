@@ -194,7 +194,6 @@ footer {
   .footer {
     margin-top: 80px;
     background-color: #03A9F4;
-    padding: 0 2.5%;
     padding-top: 50px;
     
     address {
@@ -204,7 +203,8 @@ footer {
 
   .bottombar {
     background-color: #0288D1;
-    padding: 10px 2.5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     span {
       //margin: 10px;
