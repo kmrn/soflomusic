@@ -176,19 +176,29 @@ main {
 
 
 footer {
+  color: #fff;
   
+  @media (max-width: 720px) {
+    .footer,
+    .bottombar {
+      text-align: center;
+    }
+  }
 
   .footer {
     margin-top: 80px;
     background-color: #03A9F4;
-    height: 60px;
-
+    padding: 0 2.5%;
+    padding-top: 50px;
+    
+    address {
+      font-size: 1.2em;
+    }
   }
 
   .bottombar {
     background-color: #0288D1;
-    color: #fff;
-    padding: 10px;
+    padding: 10px 2.5%;
 
     span {
       //margin: 10px;
