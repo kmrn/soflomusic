@@ -5,7 +5,7 @@ html
     meta(name="theme-color", content="#03A9F4")
     //meta(name="theme-color", content="#0288D1")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="#{url}/css/main.css")
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
@@ -18,25 +18,26 @@ html
       .container
         .row
           h1.hidden-sm.hidden-xs
-            a(href="#{url}").logo SoFLo Music School
+            a(href="/").logo SoFLo Music School
           h1.visible-sm.visible-xs
-            a(href="#{url}").logo SoFLo
+            a(href="/").logo SoFLo
 
           nav
             ul.nav.nav-pills
               li(role="presentation", class=(current.source=='about'?'active':''))
-                a(href="about") About
+                a(href="/about") About
               li(role="presentation", class=(current.source=='rates'?'active':''))
-                a(href="rates") Rates
+                a(href="/rates") Rates
               li(role="presentation", class=(current.source=='teachers'?'active':'')).dropdown
-                a(class="dropdown-toggle", data-toggle="dropdown", href="teachers", role="button", aria-expanded="false")
+                a(class="dropdown-toggle", data-toggle="dropdown", href="#", role="button", aria-expanded="false")
                   | Teachers
                   span.caret
                 ul(role="menu").dropdown-menu
-                  li
-                    a(href="#") Teacher
+                  for article, slug in public.teachers._data
+                    li
+                      a(href="/teachers/#{ slug }") #{ article.title }
               li(role="presentation", class=(current.source=='contact'?'active':''))
-                a(href="contact") Contact Us
+                a(href="/contact") Contact Us
               //h2 561 674 1151
 
     main
