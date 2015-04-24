@@ -20,16 +20,22 @@ header {
   width: 100%;
   padding: 20px;
   vertical-align: middle;
+    
+  @media (max-width: 740px) {
+    .row { 
+      text-align: center; 
+    }
+  }
+  
+  @media (max-width: 940px) {
+    h1 { font-size: 3rem; }
+  }
   
   h1 {
-    text-align: left;
-    font-weight: 600;
+    //text-align: left;
+    font-weight: 800;
     float: left;
-  }
-  @media (max-width:400px) {
-    .logo {
-      @extend .center-block;
-    }
+    font-size: 3.5rem;
   }
   
 
