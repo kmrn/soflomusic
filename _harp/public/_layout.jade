@@ -18,16 +18,16 @@ html
       .container
         .row
           h1.hidden-sm.hidden-xs
-            a(href="/").logo SoFLo Music School
+            a(href="#{url}").logo SoFLo Music School
           h1.visible-sm.visible-xs
-            a(href="/").logo SoFLo
+            a(href="#{url}").logo SoFLo
 
           nav
             ul.nav.nav-pills
               li(role="presentation", class=(current.source=='about'?'active':''))
-                a(href="/about") About
+                a(href="#{url}/about") About
               li(role="presentation", class=(current.source=='rates'?'active':''))
-                a(href="/rates") Rates
+                a(href="#{url}/rates") Rates
               li(role="presentation", class=(current.source=='teachers'?'active':'')).dropdown
                 a(class="dropdown-toggle", data-toggle="dropdown", href="#", role="button", aria-expanded="false")
                   | Teachers
@@ -35,9 +35,9 @@ html
                 ul(role="menu").dropdown-menu
                   for article, slug in public.teachers._data
                     li
-                      a(href="/teachers/#{ slug }") #{ article.title }
+                      a(href="#{url}/teachers/#{ slug }") #{ article.title }
               li(role="presentation", class=(current.source=='contact'?'active':''))
-                a(href="/contact") Contact Us
+                a(href="#{url}/contact") Contact Us
               //h2 561 674 1151
 
     main
